@@ -14,7 +14,7 @@ const {count}= useAppSelector((state)=>state.counter );
   const dispatch=useAppDispatch();
 
   const countArray=[...Array(count)];
-   //console.log(Number.isInteger(countArray?.length/5) ? Math.round(countArray?.length/5)?"line-through":"" : null);
+   console.log(Number.isInteger(countArray?.length/5) ? Math.round(countArray?.length/5)?"line-through":"" : null);
 
  
 
