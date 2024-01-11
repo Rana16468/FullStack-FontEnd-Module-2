@@ -14,9 +14,10 @@ const {count}= useAppSelector((state)=>state.counter );
   const dispatch=useAppDispatch();
 
   const countArray=[...Array(count)];
-   console.log(Number.isInteger(countArray?.length/5) ? Math.round(countArray?.length/5)?"line-through":"" : null);
-
  
+   //console.log(Number.isInteger(countArray?.length/5) ? Math.round(countArray?.length/5)?"line-through":"" : null);
+
+   //countArray.map((_, index) =>console.log((index+1)%5===0))
 
 
   return (
@@ -33,7 +34,11 @@ const {count}= useAppSelector((state)=>state.counter );
       countArray?.length>0 && <div className="bg-gray-200 p-4">
       <div className="flex space-x-2 text-4xl font-bold">
         {countArray.map((_, index) => (
-          <div key={index} className={`text-blue-500 ${countArray.length%5===0?"line-through":""}`}>|</div>
+          <div key={index} className={`text-blue-500`}>
+           {
+              (index+1 ) %5===0?"/":"."
+           }
+          </div>
         ))}
       </div>
 
